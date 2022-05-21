@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Assignment_02</string>
+    <string name="lets_start">Lets Start</string>
+    <string name="enjoy_your_learning">Enjoy your Learning!!!</string>
+    <string name="learn_parts_of_speech">Learn Parts of Speech</string>
+
+    <string name="pronoun">Pronoun</string>
+    <string name="verb">Verb</string>
+    <string name="noun">Noun</string>
+    <string name="nouns">nouns</string>
+    <string name="pronouns">pronouns</string>
+    <string name="adverb">Adverb</string>
+    <string name="verbs">Verbs</string>
+    <string name="prepositions">Prepositions</string>
+    <string name="conjuctions">Conjuctions</string>
+    <string name="articles">Articles</string>
+    <string name="adjectives">Adjectives</string>
+    <string name="adverbs">adverbs</string>
+    <string name="attempt_quiz">Attempt Quiz</string>
+    <string name="quiz">Quiz</string>
+    <string name="textview">TextView</string>
+
+    <string name="next">Next</string>
+    <string name="button">Button</string>
+    <string name="correct_answer">Correct Answer:</string>
+</resources>

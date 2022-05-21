@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Menu">
+
+    <TextView
+        android:id="@+id/txtbox1"
+        android:layout_width="0dp"
+        android:layout_height="83dp"
+        android:background="@color/backcolor"
+        android:text="@string/learn_parts_of_speech"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.002"
+        tools:ignore="TextContrastCheck" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtbox1"
+      >
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/backcolor"
+            android:lineSpacingExtra="0sp"
+            android:onClick="Noun"
+            android:text="@string/nouns"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="UsingOnClickInXml,TextContrastCheck" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/backcolor"
+            android:onClick="Pronouns"
+            android:text="@string/pronouns"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="TextContrastCheck,UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/backcolor"
+            android:onClick="Adjectives"
+            android:text="@string/adjectives"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="OnClick,TextContrastCheck,UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/backcolor"
+            android:onClick="Adverbs"
+            android:text="@string/adverbs"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="OnClick,TextContrastCheck,UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/backcolor"
+            android:onClick="Verbs"
+            android:text="@string/verbs"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck,UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/backcolor"
+            android:onClick="Prepositions"
+            android:text="@string/prepositions"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="OnClick,TextContrastCheck,UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/button14"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/backcolor"
+            android:onClick="Conjunctions"
+            android:text="@string/conjuctions"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="OnClick,TextContrastCheck,UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/button15"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/backcolor"
+            android:onClick="Articles"
+            android:text="@string/articles"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="OnClick,TextContrastCheck,UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/backcolor"
+            android:text="@string/attempt_quiz"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            android:onClick="Quiz"
+            tools:ignore="OnClick,TextContrastCheck,UsingOnClickInXml" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.widget.TextView;
 
 public class Noun extends AppCompatActivity {
@@ -14,6 +15,7 @@ public class Noun extends AppCompatActivity {
         setContentView(R.layout.activity_noun);
         TextView textView;
         textView=findViewById(R.id.textView3);
+        textView.setMovementMethod(new ScrollingMovementMethod());
         Intent intent = getIntent();
         textView.setText(intent.getStringExtra("Noun"));
 

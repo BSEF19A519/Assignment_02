@@ -3,6 +3,7 @@ package com.example.assignment_02;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.text.HtmlCompat;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -36,8 +37,13 @@ public class Quiz extends AppCompatActivity {
         Options();
 
         nextbtn.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View view) {
+                    choice1.setBackgroundResource(R.color.backcolor);
+                    choice2.setBackgroundResource(R.color.backcolor);
+                    choice3.setBackgroundResource(R.color.backcolor);
+                    choice4.setBackgroundResource(R.color.backcolor);
 
                     switch (count)
                     {
@@ -133,6 +139,10 @@ public class Quiz extends AppCompatActivity {
                             break;
                         case 11:
                             textView.setText(result+"/10");
+                            choice1.setText("Over");
+                            choice2.setText("Over");
+                            choice3.setText("Over");
+                            choice4.setText("Over");
                             if(result<6)
                             {
                                 correctanswer.setText("Do your best nexttime!!!");
@@ -160,50 +170,79 @@ public class Quiz extends AppCompatActivity {
     public void Options()
     {
         choice1.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint({"ResourceAsColor", "SetTextI18n"})
             @Override
             public void onClick(View view) {
                 if(choice1.getText().toString().equals(answer))
                 {
-                    correctanswer.setText("Correct Answer:"+answer);
+                    correctanswer.setText("Correct Answer:   "+answer);
                     count++;
                     result++;
                     choice1.setText("CORRECT");
+                    choice1.setBackgroundResource(R.color.green);
+                }
+                else
+                {
+                    choice1.setText("INCORRECT");
+                    choice1.setBackgroundResource(R.color.red);
                 }
             }
         });
         choice2.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint({"ResourceAsColor", "SetTextI18n"})
             @Override
             public void onClick(View view) {
                 if(choice2.getText().toString().equals(answer))
                 {
-                    correctanswer.setText("Correct Answer:"+answer);
+                    correctanswer.setText("Correct Answer:   "+answer);
                     count++;
                     result++;
                     choice2.setText("CORRECT");
+                    choice2.setBackgroundResource(R.color.green);
+                }
+                else
+                {
+                    choice2.setText("INCORRECT");
+                    choice2.setBackgroundResource(R.color.red);
                 }
             }
         });
         choice3.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint({"ResourceAsColor", "SetTextI18n"})
             @Override
             public void onClick(View view) {
                 if(choice3.getText().toString().equals(answer))
                 {
-                    correctanswer.setText("Correct Answer:"+answer);
+                    correctanswer.setText("Correct Answer:   "+answer);
                     count++;
                     result++;
                     choice3.setText("CORRECT");
+                    choice3.setBackgroundResource(R.color.green);
+                }
+                else
+                {
+                    choice3.setText("INCORRECT");
+                    choice3.setBackgroundResource(R.color.red);
                 }
             }
         });
         choice4.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint({"ResourceAsColor", "SetTextI18n"})
             @Override
             public void onClick(View view) {
                 if(choice4.getText().toString().equals(answer))
                 {
-                    correctanswer.setText("Correct Answer:"+answer);
+                    correctanswer.setText("Correct Answer:   "+answer);
                     count++;
                     result++;
                     choice4.setText("CORRECT");
+
+                    choice4.setBackgroundResource(R.color.green);
+                }
+                else
+                {
+                    choice4.setText("INCORRECT");
+                    choice4.setBackgroundResource(R.color.red);
                 }
             }
         });

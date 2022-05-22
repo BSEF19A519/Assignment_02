@@ -3,6 +3,7 @@ package com.example.assignment_02;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
@@ -17,6 +18,17 @@ public class MainActivity extends AppCompatActivity {
     public void StartCourse(View view)
     {
         Intent intent = new Intent(MainActivity.this, Menu.class);
+        startActivity(intent);
+    }
+    public void openWebPage(View view) {
+
+        Uri webpage = Uri.parse("https://github.com/BSEF19A519/Assignment_02.git");
+        Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+
+        startActivity(intent);
+    }
+    public void Quiz(View view) {
+        Intent intent = new Intent(MainActivity.this, Quiz.class);
         startActivity(intent);
     }
 }

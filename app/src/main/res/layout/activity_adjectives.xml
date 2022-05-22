@@ -6,4 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".Adjectives">
 
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="0dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/purple_200"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/adjectives"
+
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:text="@string/textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        android:layout_marginLeft="?android:attr/scrollbarSize"
+        android:layout_marginTop="?android:attr/scrollbarSize"
+        android:layout_marginRight="?android:attr/scrollbarSize"
+        android:layout_marginBottom="?android:attr/scrollbarSize"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

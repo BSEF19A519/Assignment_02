@@ -4,16 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/txtbox1"
-        android:layout_width="407dp"
+        android:layout_width="0dp"
         android:layout_height="83dp"
-        android:background="@color/backcolor"
+        android:background="@color/purple_200"
+        android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/learn_parts_of_speech"
         android:textAlignment="center"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,37 +24,87 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.002" />
+        app:layout_constraintVertical_bias="0.002"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="231dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="148dp"
-        android:background="@color/backcolor"
+        android:layout_width="199dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="132dp"
+        android:background="@color/purple_500"
+        android:backgroundTint="@color/backcolor"
+        android:fontFamily="sans-serif-medium"
+        android:foregroundTint="#4CAF50"
         android:onClick="StartCourse"
-        android:text="@string/lets_start"
+        android:text="@string/start_learning"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="24sp"
+
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.546"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtbox1" />
+        app:layout_constraintTop_toBottomOf="@+id/txtbox1"
+        tools:ignore="TextContrastCheck,UsingOnClickInXml" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="236dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="88dp"
+        android:layout_width="328dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="252dp"
+        android:fontFamily="casual"
         android:text="@string/enjoy_your_learning"
         android:textAlignment="center"
         android:textAllCaps="true"
-        android:textSize="20sp"
-        android:textStyle="normal|italic"
+        android:textColor="@color/purple_500"
+        android:textSize="24sp"
+        android:textStyle="normal|bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.626"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/button16"
+
+        android:layout_width="199dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="44dp"
+        android:background="@color/backcolor"
+        android:backgroundTint="@color/backcolor"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="Quiz"
+        android:text="@string/attempt_quiz"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textStyle="normal|bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        tools:ignore="OnClick,TextContrastCheck,UsingOnClickInXml" />
+
+    <Button
+        android:id="@+id/button17"
+
+        android:layout_width="199dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="36dp"
+        android:background="@color/backcolor"
+        android:backgroundTint="@color/backcolor"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="openWebPage"
+        android:text="@string/repository"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button16"
+        tools:ignore="TextContrastCheck,UsingOnClickInXml" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

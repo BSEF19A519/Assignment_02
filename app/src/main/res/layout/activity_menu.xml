@@ -171,7 +171,7 @@
             android:layout_marginTop="?android:attr/scrollbarSize"
             android:layout_marginRight="?android:attr/scrollbarSize"
             android:layout_marginBottom="?android:attr/scrollbarSize"
-            android:background="@color/backcolor"
+            android:background="@color/purple_200"
             android:onClick="Quiz"
             android:text="@string/attempt_quiz"
             android:textAlignment="center"

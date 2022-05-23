@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.text.HtmlCompat;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +16,7 @@ public class Quiz extends AppCompatActivity {
     String answer;
     int count=1;
     int result=0;
-
+    boolean flag1=false,flag2=false,flag3=false,flag4=false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,12 +35,15 @@ public class Quiz extends AppCompatActivity {
         choice3.setText("Adverb");
         choice4.setText("Adjective");
         answer="Adjective";
+        flag4=true;
         Options();
+
 
         nextbtn.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View view) {
+                flag1=flag2=flag3=flag4=false;
                     choice1.setBackgroundResource(R.color.backcolor);
                     choice2.setBackgroundResource(R.color.backcolor);
                     choice3.setBackgroundResource(R.color.backcolor);
@@ -55,6 +59,7 @@ public class Quiz extends AppCompatActivity {
                             choice3.setText("Adverb");
                             choice4.setText("Adjective");
                             answer="Pronoun";
+                            flag2=true;
                             Options();
                             break;
                         case 3:
@@ -65,6 +70,7 @@ public class Quiz extends AppCompatActivity {
                             choice3.setText("Preposition");
                             choice4.setText("Adjective");
                             answer="Preposition";
+                            flag3=true;
                             Options();
                             break;
                         case 4:
@@ -75,6 +81,7 @@ public class Quiz extends AppCompatActivity {
                             choice3.setText("Preposition");
                             choice4.setText("Noun");
                             answer="Adverb";
+                            flag2=true;
                             Options();
                             break;
                         case 5:
@@ -85,6 +92,7 @@ public class Quiz extends AppCompatActivity {
                             choice3.setText("Preposition");
                             choice4.setText("Verb");
                             answer="Verb";
+                            flag4=true;
                             Options();
                             break;
                         case 6:
@@ -95,6 +103,7 @@ public class Quiz extends AppCompatActivity {
                             choice3.setText("on");
                             choice4.setText("the");
                             answer="in";
+                            flag2=true;
                             Options();
                             break;
                         case 7:
@@ -105,6 +114,7 @@ public class Quiz extends AppCompatActivity {
                             choice3.setText("Letters");
                             choice4.setText("Nouns");
                             answer="Nouns";
+                            flag4=true;
                             Options();
                             break;
                         case 8:
@@ -115,6 +125,7 @@ public class Quiz extends AppCompatActivity {
                             choice3.setText("Tell us more about Noun");
                             choice4.setText("None");
                             answer="Express Actions";
+                            flag2=true;
                             Options();
                             break;
                         case 9:
@@ -125,6 +136,7 @@ public class Quiz extends AppCompatActivity {
                             choice3.setText("Teacher");
                             choice4.setText("All of the above");
                             answer="New";
+                            flag2=true;
                             Options();
                             break;
                         case 10:
@@ -135,24 +147,80 @@ public class Quiz extends AppCompatActivity {
                             choice3.setText("Although");
                             choice4.setText("As well");
                             answer="As long as";
+                            flag2=true;
                             Options();
                             break;
                         case 11:
-                            textView.setText(result+"/10");
-                            choice1.setText("Over");
-                            choice2.setText("Over");
-                            choice3.setText("Over");
-                            choice4.setText("Over");
-                            if(result<6)
+                            textView.setText(HtmlCompat.fromHtml("11. What part of speech describes a verb,adjective or a adverb and answers when?where?how? and to what extent?",HtmlCompat.FROM_HTML_MODE_LEGACY));
+                            correctanswer.setText("Correct Answer:");
+                            choice1.setText("Verb");
+                            choice2.setText("Adjective");
+                            choice3.setText("Adverb");
+                            choice4.setText("Preposition");
+                            answer="Adverb";
+                            flag3=true;
+                            Options();
+                            break;
+                        case 12:
+                            textView.setText(HtmlCompat.fromHtml("12. What part of speech connects words or groups of words?Examples are for ,and,nor,but,or,yet,so?",HtmlCompat.FROM_HTML_MODE_LEGACY));
+                            correctanswer.setText("Correct Answer:");
+                            choice1.setText("Noun");
+                            choice2.setText("Pronoun");
+                            choice3.setText("Adverb");
+                            choice4.setText("Conjunction");
+                            answer="Conjunction";
+                            flag4=true;
+                            Options();
+                            break;
+                        case 13:
+                            textView.setText(HtmlCompat.fromHtml("13. What type of pronouns are I,we,she ,they,him,us?They refer to \"people\".",HtmlCompat.FROM_HTML_MODE_LEGACY));
+                            correctanswer.setText("Correct Answer:");
+                            choice1.setText("Personal Pronoun");
+                            choice2.setText("Reflexive Pronoun");
+                            choice3.setText("Relative Pronoun");
+                            choice4.setText("Reciprocal Pronoun");
+                            answer="Personal Pronoun";
+                            flag1=true;
+                            Options();
+                            break;
+                        case 14:
+                            textView.setText(HtmlCompat.fromHtml("14. Robert was and unwise king. He was the king of seven kingdoms.What type of pronoun is found in this sentence?",HtmlCompat.FROM_HTML_MODE_LEGACY));
+                            correctanswer.setText("Correct Answer:");
+                            choice1.setText("Subject");
+                            choice2.setText("Object");
+                            choice3.setText("Not clear");
+                            choice4.setText("None");
+                            answer="Subject";
+                            flag1=true;
+                            Options();
+                            break;
+                        case 15:
+                            textView.setText(HtmlCompat.fromHtml("15. A verb that describes physical or mental action is called wht type of verb?",HtmlCompat.FROM_HTML_MODE_LEGACY));
+                            correctanswer.setText("Correct Answer:");
+                            choice1.setText("Helping Verb");
+                            choice2.setText("Linking Verb");
+                            choice3.setText("Action Verb");
+                            choice4.setText("None");
+                            answer="Action Verb";
+                            flag3=true;
+                            Options();
+                            break;
+                        case 16:
+//
+                            Intent intent = new Intent(Quiz.this, Result.class);
+                            String rslt="Score:   "+result+"/15";
+                            if(result<9)
                             {
-                                correctanswer.setText("Do your best nexttime!!!");
-                                nextbtn.setText("Over");
+                                intent.putExtra("result", rslt);
+                                intent.putExtra("msg", "Do your best next time!!!");
                             }
                             else
                             {
-                                correctanswer.setText("Well done!!!");
-                                nextbtn.setText("Over");
+                                intent.putExtra("result", rslt);
+                                intent.putExtra("msg", "Well Done!!!");
                             }
+
+                            startActivity(intent);
                             break;
 
                         default:
@@ -169,83 +237,153 @@ public class Quiz extends AppCompatActivity {
     }
     public void Options()
     {
-        choice1.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint({"ResourceAsColor", "SetTextI18n"})
-            @Override
-            public void onClick(View view) {
-                if(choice1.getText().toString().equals(answer))
-                {
-                    correctanswer.setText("Correct Answer:   "+answer);
-                    count++;
-                    result++;
-                    choice1.setText("CORRECT");
-                    choice1.setBackgroundResource(R.color.green);
-                }
-                else
-                {
-                    choice1.setText("INCORRECT");
-                    choice1.setBackgroundResource(R.color.red);
-                }
-            }
-        });
-        choice2.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint({"ResourceAsColor", "SetTextI18n"})
-            @Override
-            public void onClick(View view) {
-                if(choice2.getText().toString().equals(answer))
-                {
-                    correctanswer.setText("Correct Answer:   "+answer);
-                    count++;
-                    result++;
-                    choice2.setText("CORRECT");
-                    choice2.setBackgroundResource(R.color.green);
-                }
-                else
-                {
-                    choice2.setText("INCORRECT");
-                    choice2.setBackgroundResource(R.color.red);
-                }
-            }
-        });
-        choice3.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint({"ResourceAsColor", "SetTextI18n"})
-            @Override
-            public void onClick(View view) {
-                if(choice3.getText().toString().equals(answer))
-                {
-                    correctanswer.setText("Correct Answer:   "+answer);
-                    count++;
-                    result++;
-                    choice3.setText("CORRECT");
-                    choice3.setBackgroundResource(R.color.green);
-                }
-                else
-                {
-                    choice3.setText("INCORRECT");
-                    choice3.setBackgroundResource(R.color.red);
-                }
-            }
-        });
-        choice4.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint({"ResourceAsColor", "SetTextI18n"})
-            @Override
-            public void onClick(View view) {
-                if(choice4.getText().toString().equals(answer))
-                {
-                    correctanswer.setText("Correct Answer:   "+answer);
-                    count++;
-                    result++;
-                    choice4.setText("CORRECT");
+   //for(int i=0;i<1;i++) {
+       choice1.setOnClickListener(new View.OnClickListener() {
+           @SuppressLint({"ResourceAsColor", "SetTextI18n"})
+           @Override
+           public void onClick(View view) {
+               if (choice1.getText().toString().equals(answer)) {
+                   correctanswer.setText("Correct Answer:   " + answer);
+                   count++;
+                   result++;
+                   choice1.setText("CORRECT");
+                   choice1.setBackgroundResource(R.color.green);
+               } else {
+                   choice1.setText("INCORRECT");
+                   choice1.setBackgroundResource(R.color.red);
+                   if (flag2 == true) {
+                       correctanswer.setText("Correct Answer:   " + answer);
+                       count++;
 
-                    choice4.setBackgroundResource(R.color.green);
-                }
-                else
-                {
-                    choice4.setText("INCORRECT");
-                    choice4.setBackgroundResource(R.color.red);
-                }
-            }
-        });
+                       choice2.setText("CORRECT");
+                       choice2.setBackgroundResource(R.color.green);
+                   } else if (flag3 == true) {
+                       correctanswer.setText("Correct Answer:   " + answer);
+                       count++;
+
+                       choice3.setText("CORRECT");
+                       choice3.setBackgroundResource(R.color.green);
+                   } else if (flag4 == true) {
+                       correctanswer.setText("Correct Answer:   " + answer);
+                       count++;
+
+                       choice4.setText("CORRECT");
+                       choice4.setBackgroundResource(R.color.green);
+                   }
+               }
+
+
+           }
+       });
+
+       choice2.setOnClickListener(new View.OnClickListener() {
+           @SuppressLint({"ResourceAsColor", "SetTextI18n"})
+           @Override
+           public void onClick(View view) {
+               if (choice2.getText().toString().equals(answer)) {
+                   correctanswer.setText("Correct Answer:   " + answer);
+                   count++;
+                   result++;
+                   choice2.setText("CORRECT");
+                   choice2.setBackgroundResource(R.color.green);
+               } else {
+                   choice2.setText("INCORRECT");
+                   choice2.setBackgroundResource(R.color.red);
+                   if (flag1 == true) {
+                       correctanswer.setText("Correct Answer:   " + answer);
+                       count++;
+
+                       choice1.setText("CORRECT");
+                       choice1.setBackgroundResource(R.color.green);
+                   } else if (flag3 == true) {
+                       correctanswer.setText("Correct Answer:   " + answer);
+                       count++;
+
+                       choice3.setText("CORRECT");
+                       choice3.setBackgroundResource(R.color.green);
+                   } else if (flag4 == true) {
+                       correctanswer.setText("Correct Answer:   " + answer);
+                       count++;
+
+                       choice4.setText("CORRECT");
+                       choice4.setBackgroundResource(R.color.green);
+                   }
+               }
+           }
+       });
+       choice3.setOnClickListener(new View.OnClickListener() {
+           @SuppressLint({"ResourceAsColor", "SetTextI18n"})
+           @Override
+           public void onClick(View view) {
+               if (choice3.getText().toString().equals(answer)) {
+                   correctanswer.setText("Correct Answer:   " + answer);
+                   count++;
+                   result++;
+                   choice3.setText("CORRECT");
+                   choice3.setBackgroundResource(R.color.green);
+               } else {
+                   choice3.setText("INCORRECT");
+                   choice3.setBackgroundResource(R.color.red);
+                   if (flag1 == true) {
+                       correctanswer.setText("Correct Answer:   " + answer);
+                       count++;
+
+                       choice1.setText("CORRECT");
+                       choice1.setBackgroundResource(R.color.green);
+                   } else if (flag2 == true) {
+                       correctanswer.setText("Correct Answer:   " + answer);
+                       count++;
+
+                       choice2.setText("CORRECT");
+                       choice2.setBackgroundResource(R.color.green);
+                   } else if (flag4 == true) {
+                       correctanswer.setText("Correct Answer:   " + answer);
+                       count++;
+
+                       choice4.setText("CORRECT");
+                       choice4.setBackgroundResource(R.color.green);
+                   }
+               }
+           }
+       });
+       choice4.setOnClickListener(new View.OnClickListener() {
+           @SuppressLint({"ResourceAsColor", "SetTextI18n"})
+           @Override
+           public void onClick(View view) {
+               if (choice4.getText().toString().equals(answer)) {
+                   correctanswer.setText("Correct Answer:   " + answer);
+                   count++;
+                   result++;
+                   choice4.setText("CORRECT");
+
+                   choice4.setBackgroundResource(R.color.green);
+               } else {
+                   choice4.setText("INCORRECT");
+                   choice4.setBackgroundResource(R.color.red);
+                   if (flag2 == true) {
+                       correctanswer.setText("Correct Answer:   " + answer);
+                       count++;
+
+                       choice2.setText("CORRECT");
+                       choice2.setBackgroundResource(R.color.green);
+                   } else if (flag3 == true) {
+                       correctanswer.setText("Correct Answer:   " + answer);
+                       count++;
+
+                       choice3.setText("CORRECT");
+                       choice3.setBackgroundResource(R.color.green);
+                   } else if (flag1 == true) {
+                       correctanswer.setText("Correct Answer:   " + answer);
+                       count++;
+
+                       choice1.setText("CORRECT");
+                       choice1.setBackgroundResource(R.color.green);
+                   }
+               }
+           }
+       });
+   //}
+
     }
 
 

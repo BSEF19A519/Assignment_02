@@ -34,6 +34,7 @@
         android:layout_marginRight="?android:attr/scrollbarSize"
         android:layout_marginBottom="?android:attr/scrollbarSize"
         android:scrollbars="vertical"
+        android:textSize="20sp"
 
         android:text="@string/textview"
         app:layout_constraintEnd_toEndOf="parent"

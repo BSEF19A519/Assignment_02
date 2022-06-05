@@ -33,8 +33,10 @@
     <string name="pronou">Pronouns</string>
     <string name="adver">Adverbs</string>
 
-    <string name="textview">TextView</string>
+
     <string name="continue_learning">Continue Learning</string>
+    <string name="textview">TextView</string>
+
 
 
 </resources>

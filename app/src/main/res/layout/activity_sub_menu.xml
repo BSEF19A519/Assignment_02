@@ -4,17 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Adjectives">
+    tools:context=".SubMenu">
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/textView16"
         android:layout_width="0dp"
         android:layout_height="83dp"
         android:layout_marginTop="4dp"
         android:background="@color/purple_200"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="@string/adjectives"
-
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="34sp"
@@ -26,16 +24,18 @@
         tools:ignore="TextContrastCheck" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textView17"
+
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="?android:attr/scrollbarSize"
-        android:layout_marginTop="?android:attr/scrollbarSize"
         android:layout_marginRight="?android:attr/scrollbarSize"
         android:scrollbars="vertical"
         android:text="@string/textview"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="176dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

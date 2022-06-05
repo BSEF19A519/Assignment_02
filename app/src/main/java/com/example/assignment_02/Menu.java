@@ -15,7 +15,7 @@ public class Menu extends AppCompatActivity {
     }
 
     public void Noun(View view) {
-        Intent intent = new Intent(Menu.this, Noun.class);
+        Intent intent = new Intent(Menu.this, SubMenu.class);
 
         String noun = "A noun is a naming word. It names a person, place, thing, idea, living creature, quality, or action.\n" +
                 "\nExamples: cowboy, theatre, box, thought, tree, kindness, arrival\n\n"+"Proper nouns vs. common nouns\n" +
@@ -29,13 +29,14 @@ public class Menu extends AppCompatActivity {
                 "\n";
 
         intent.putExtra("Noun", noun);
+        intent.putExtra("Type", "Noun");
         startActivity(intent);
 
 
     }
 
     public void Pronouns(View view) {
-        Intent intent = new Intent(Menu.this, Pronoun.class);
+        Intent intent = new Intent(Menu.this,  SubMenu.class);
         String pronoun =
                 "A pronoun is used instead of a noun, to avoid repeating the noun.\n" +
                 "Examples: I, you, he, she, it, we, they\n\n"+"Pronouns do a whole lot more than turn phrases into sentences. They provide context, make your sentences’ meanings clearer, and shape how we perceive people and things. Read on to learn about the different ways we use pronouns and how to use them to construct sentences. There’s a lot to understand about pronouns, and even if you already understand a lot of it subliminally, reading a comprehensive guide to pronouns’ uses and purposes (complete with examples!) can strengthen your grasp of English grammar and make you a stronger writer. \n" +
@@ -94,11 +95,12 @@ public class Menu extends AppCompatActivity {
                         "Yourselves \n" +
                         "Themselves\n";
         intent.putExtra("Pronoun", pronoun);
+        intent.putExtra("Type", "Pronoun");
         startActivity(intent);
     }
 
     public void Adjectives(View view) {
-        Intent intent = new Intent(Menu.this, Adjectives.class);
+        Intent intent = new Intent(Menu.this,  SubMenu.class);
         String adjectives = "Adjectives are words that modify nouns. They are often called “describing words” because they give us further details about a noun, such as what it looks like (the white horse), how many there are (the three boys) or which one it is (the last house). Adjectives do not modify verbs or other adjectives.Most often, adjectives are easy to identify in a sentence because they fall right before the nouns they modify.\n" +
                 "\nExamples\n" +
                 "1. The old clock hung upon the wall.\n" +
@@ -113,22 +115,24 @@ public class Menu extends AppCompatActivity {
                 "The examples above use the limiting adjectives five (how many ladies?), every (which year/s?), those (which flowers?), that (which table?), best (which piece?) and her (whose mother?). Technically, definite articles (the) and indefinite articles (a/an) also function as limiting adjectives.\n" +
                 "\n";
         intent.putExtra("Adjectives", adjectives);
+        intent.putExtra("Type", "Adjectives");
         startActivity(intent);
     }
 
     public void Adverbs(View view) {
-        Intent intent = new Intent(Menu.this, Adverb.class);
+        Intent intent = new Intent(Menu.this, SubMenu.class);
         String adverb = "An adverb is a word that describes an adjective, a verb, or another adverb. Take a look at these examples:\n" +
                 "\n" +
                 "Here’s an example: I entered the room quietly. Quietly is describing how you entered (verb) the room.\n" +
                 "\n" +
                 "Here’s another example: A cheetah is always faster than a lion. Always is describing how frequently a cheetah is faster (adjective) than a lion.";
         intent.putExtra("Adverb", adverb);
+        intent.putExtra("Type", "Adverb");
         startActivity(intent);
     }
 
     public void Verbs(View view) {
-        Intent intent = new Intent(Menu.this, Verb.class);
+        Intent intent = new Intent(Menu.this,  SubMenu.class);
         String verbs= "A verb is a word which describes an action (doing something) or a state (being something).\n" +
                 "Examples: walk, talk, think, believe, live, like, want"+"What is a verb? \n" +
                 "Let’s start with the basics: What is a verb? Verbs are words that describe actions, whether physical or mental. Verbs also describe a “state of being,” like the verbs be, become, or exist. \n" +
@@ -239,11 +243,12 @@ public class Menu extends AppCompatActivity {
                 "The important thing to remember about phrasal verbs is that they act as a single verb, so you can still use them with other verbs and prepositions. However, when you conjugate a phrasal verb, you only conjugate the part of the phrase that’s actually a verb, like get. \n" +
                 "\n" ;
         intent.putExtra("Verb", verbs);
+        intent.putExtra("Type", "Verb");
         startActivity(intent);
     }
 
     public void Prepositions(View view) {
-        Intent intent = new Intent(Menu.this, Prepositions.class);
+        Intent intent = new Intent(Menu.this,  SubMenu.class);
         String prep = "What Is a Preposition?\n\n" +
                 "“Vampires! Zombies! Werewolves!”\n" +
                 "\n" +
@@ -279,11 +284,12 @@ public class Menu extends AppCompatActivity {
                 "Dan ate lunch with his boss.\n" +
                 "You can also use tools like Google Ngrams to see which prepositions most commonly occur with particular words—but remember, this tool can’t explain the difference in meaning between different prepositional phrases like “pay for” (to purchase) and “pay off” (to bribe). For that, you may want to refer to a list of prepositions that includes the meanings of common combinations.";
         intent.putExtra("Prepositions", prep);
+        intent.putExtra("Type", "Prepositions");
         startActivity(intent);
     }
 
     public void Conjunctions(View view) {
-        Intent intent = new Intent(Menu.this, Conjuctions.class);
+        Intent intent = new Intent(Menu.this,  SubMenu.class);
         String conjunction = "Conjunctions are words that link other words, phrases, or clauses together.\n" +
                 "\n" +
                 "I like cooking and eating, but I don’t like washing dishes afterward. Sophie is clearly exhausted, yet she insists on dancing till dawn.\n" +
@@ -298,11 +304,12 @@ public class Menu extends AppCompatActivity {
                 "\n" +
                 "I can stay out until the clock strikes twelve.";
         intent.putExtra("Conjunctions", conjunction);
+        intent.putExtra("Type", "Conjunctions");
         startActivity(intent);
     }
 
     public void Articles(View view) {
-        Intent intent = new Intent(Menu.this, Articles.class);
+        Intent intent = new Intent(Menu.this, SubMenu.class);
         String article = "Articles are words that define a noun as specific or unspecific. Consider the following examples:\n" +
                 "\n" +
                 "After the long day, the cup of tea tasted particularly good.\n" +
@@ -322,6 +329,7 @@ public class Menu extends AppCompatActivity {
                 "* Please hand me a book; any book will do.\n" +
                 "* Please hand me an autobiography; any autobiography will do";
         intent.putExtra("Articles", article);
+        intent.putExtra("Type", "Articles");
         startActivity(intent);
     }
 

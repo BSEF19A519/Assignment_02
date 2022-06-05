@@ -10,34 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Assignment_02">
         <activity
+            android:name=".QuizListView"
+            android:exported="false" />
+        <activity
+            android:name=".SubMenu"
+            android:exported="false" />
+        <activity
             android:name=".Result"
             android:exported="false" />
         <activity
             android:name=".Quiz"
-            android:exported="false" />
-        <activity
-            android:name=".Adjectives"
-            android:exported="false" />
-        <activity
-            android:name=".Articles"
-            android:exported="false" />
-        <activity
-            android:name=".Conjuctions"
-            android:exported="false" />
-        <activity
-            android:name=".Prepositions"
-            android:exported="false" />
-        <activity
-            android:name=".Adverb"
-            android:exported="false" />
-        <activity
-            android:name=".Verb"
-            android:exported="false" />
-        <activity
-            android:name=".Pronoun"
-            android:exported="false" />
-        <activity
-            android:name=".Noun"
             android:exported="false" />
         <activity
             android:name=".Menu"

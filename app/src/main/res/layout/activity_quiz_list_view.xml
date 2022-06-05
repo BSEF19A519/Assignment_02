@@ -4,19 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Verb">
-
+    tools:context=".QuizListView">
     <TextView
-        android:id="@+id/textView4verb"
+        android:id="@+id/textView2"
         android:layout_width="0dp"
         android:layout_height="83dp"
-        android:layout_marginTop="4dp"
+
+
         android:background="@color/purple_200"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="@string/verbs"
-
+        android:text="@string/quiz"
         android:textAlignment="center"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,20 +24,13 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TextContrastCheck" />
 
-    <TextView
-        android:id="@+id/textView13"
+    <ListView
+        android:id="@+id/quizlist"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="?android:attr/scrollbarSize"
-        android:layout_marginTop="?android:attr/scrollbarSize"
-        android:layout_marginRight="?android:attr/scrollbarSize"
-        android:layout_marginBottom="?android:attr/scrollbarSize"
-        android:scrollbars="vertical"
-        android:textSize="20sp"
-
-        android:text="@string/textview"
+        android:layout_height="587dp"
+        android:layout_marginTop="100dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4verb" />
-
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

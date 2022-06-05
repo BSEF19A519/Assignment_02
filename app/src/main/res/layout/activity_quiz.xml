@@ -11,7 +11,7 @@
     <TextView
         android:id="@+id/textView5"
         android:layout_width="400dp"
-        android:layout_height="70dp"
+        android:layout_height="65dp"
 
         android:layout_marginLeft="?android:attr/scrollbarSize"
         android:layout_marginTop="16dp"
@@ -27,8 +27,8 @@
         tools:ignore="MissingConstraints" />
 
     <LinearLayout
-        android:layout_width="362dp"
-        android:layout_height="339dp"
+        android:layout_width="386dp"
+        android:layout_height="338dp"
         android:layout_marginTop="12dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,7 +39,7 @@
         <Button
             android:id="@+id/button3"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:layout_marginLeft="?android:attr/scrollbarSize"
             android:layout_marginTop="?android:attr/scrollbarSize"
             android:layout_marginRight="?android:attr/scrollbarSize"
@@ -52,7 +52,7 @@
         <Button
             android:id="@+id/button8"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:layout_marginLeft="?android:attr/scrollbarSize"
             android:layout_marginTop="?android:attr/scrollbarSize"
             android:layout_marginRight="?android:attr/scrollbarSize"
@@ -65,7 +65,7 @@
         <Button
             android:id="@+id/button9"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:layout_marginLeft="?android:attr/scrollbarSize"
             android:layout_marginTop="?android:attr/scrollbarSize"
             android:layout_marginRight="?android:attr/scrollbarSize"
@@ -79,7 +79,7 @@
         <Button
             android:id="@+id/button10"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:layout_marginLeft="?android:attr/scrollbarSize"
             android:layout_marginTop="?android:attr/scrollbarSize"
             android:layout_marginRight="?android:attr/scrollbarSize"
@@ -93,7 +93,7 @@
     <TextView
         android:id="@+id/textView6"
         android:layout_width="0dp"
-        android:layout_height="67dp"
+        android:layout_height="60dp"
 
         android:layout_marginLeft="?android:attr/scrollbarSize"
         android:layout_marginTop="28dp"

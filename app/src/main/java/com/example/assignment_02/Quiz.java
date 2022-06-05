@@ -1,16 +1,8 @@
 package com.example.assignment_02;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.text.HtmlCompat;
-
-import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
-
 import java.util.ArrayList;
 
 public class Quiz extends AppCompatActivity {

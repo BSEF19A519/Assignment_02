@@ -14,6 +14,7 @@
         android:layout_height="70dp"
 
         android:layout_marginLeft="?android:attr/scrollbarSize"
+        android:layout_marginTop="16dp"
         android:layout_marginRight="?android:attr/scrollbarSize"
         android:text="@string/textview"
         android:textAlignment="textStart"
@@ -22,14 +23,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
     <LinearLayout
-        android:layout_width="348dp"
-        android:layout_height="405dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="362dp"
+        android:layout_height="339dp"
+        android:layout_marginTop="12dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6">
 
@@ -85,19 +88,6 @@
             android:text="@string/button"
             android:textSize="20sp" />
 
-        <Button
-            android:id="@+id/button11"
-            android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:layout_marginLeft="?android:attr/scrollbarSize"
-            android:layout_marginTop="?android:attr/scrollbarSize"
-            android:layout_marginRight="?android:attr/scrollbarSize"
-            android:layout_marginBottom="?android:attr/scrollbarSize"
-            android:background="@color/purple_200"
-
-            android:text="@string/next"
-            android:textSize="20sp"
-            tools:ignore="OnClick,UsingOnClickInXml" />
     </LinearLayout>
 
     <TextView
@@ -106,7 +96,7 @@
         android:layout_height="67dp"
 
         android:layout_marginLeft="?android:attr/scrollbarSize"
-        android:layout_marginTop="?android:attr/scrollbarSize"
+        android:layout_marginTop="28dp"
         android:layout_marginRight="?android:attr/scrollbarSize"
         android:text="@string/correct_answer"
         android:textAlignment="textStart"
@@ -114,7 +104,6 @@
         android:textSize="20sp"
         android:textStyle="normal|bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 </androidx.constraintlayout.widget.ConstraintLayout>
